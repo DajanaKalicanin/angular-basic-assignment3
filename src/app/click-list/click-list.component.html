@@ -1,0 +1,26 @@
+<hr />
+
+<button
+  class="btn btn-primary"
+  (click)="onClickDetails()"
+>
+  Display Details
+</button>
+
+<br /><br />
+
+<p *ngIf="textDisplayed">
+  'LaLaLaLa'
+</p>
+
+<h1><small> Logs: </small></h1>
+
+<ul>
+  <li *ngFor="let log of logs; let i = index">
+      <span
+      [ngStyle]="{backgroundColor: getStyle(i)}"
+      [ngClass]="{fifthPlusItemColor: i > 3}">
+        {{log}}
+      </span>
+  </li>
+</ul>
